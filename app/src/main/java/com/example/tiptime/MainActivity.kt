@@ -7,9 +7,12 @@ import android.widget.EditText
 import android.widget.RadioGroup
 import android.widget.TextView
 import androidx.appcompat.widget.SwitchCompat
+import com.example.tiptime.databinding.ActivityMainBinding
 
 
 class MainActivity : AppCompatActivity() {
+
+    lateinit var binding : ActivityMainBinding
     lateinit var costOfService : EditText
     lateinit var service : RadioGroup
     lateinit var roundValue : SwitchCompat
@@ -18,13 +21,14 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        costOfService = findViewById(R.id.ed_costOfService)
-        service = findViewById(R.id.rg_service)
-        roundValue = findViewById(R.id.switch_round)
-        calculate = findViewById(R.id.btn_calculate)
-        tipAmount = findViewById(R.id.tv_tipAmount)
+        costOfService = binding.edCostOfService
+        service = binding.rgService
+        roundValue = binding.switchRound
+        calculate = binding.btnCalculate
+        tipAmount = binding.tvTipAmount
 
         calculate.setOnClickListener {
 
