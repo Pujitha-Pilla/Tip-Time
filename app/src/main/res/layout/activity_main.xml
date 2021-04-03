@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/ed_costOfService"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Cost of Service"
+        android:inputType="numberDecimal"
+        android:maxLines="1"
+        android:layout_margin="10dp"
+        android:padding="5dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="How was the service?"
+        android:layout_marginLeft="10dp"/>
+
+    <RadioGroup
+        android:id="@+id/rg_service"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rb_amazingService"
+            android:text="@string/amazing_service"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rb_goodService"
+            android:text="@string/good_service"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rb_okService"
+            android:text="@string/ok_service"/>
+    </RadioGroup>
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/switch_round"
+        android:text="Round up tip"
+        android:layout_margin="10dp" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_calculate"
+        android:text="@string/calculate"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginBottom="10dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tip Amount"
+        android:gravity="right"
+        android:id="@+id/tv_tipAmount"
+        android:layout_marginRight="10dp"
+        android:padding="5dp"
+        android:textSize="16sp"/>
+
+
+</LinearLayout>
